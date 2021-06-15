@@ -1,6 +1,15 @@
 :root{
-    --hnf-bg-color:#2874a6;
-    --hnf-text-color:white;
+    --hnf-bg-color: #2874a6;
+    --hnf-text-color: white;
+
+    --sa-title-color: #2874a6;
+    --sa-text-color: black;
+}
+
+  
+
+body {
+    font-family: 'Quicksand', sans-serif;
 }
 
 
@@ -10,21 +19,38 @@ header, nav, footer {
 }
 
 header h1 {
-    font-size: 1.5em;
+    margin-top: 0.7rem;
+    padding-top: 0;
+    font-size: 1.5rem;
+	font-variant-caps: small-caps; 
     text-align: center;
 }
-
+/************** La barre de navigation NAV ******************/
+nav {
+    padding: 0 20px;
+}
 nav a {
     font-size: 1em;
-    color: var(--hnf-text-color); 
+    color: var(--hnf-text-color);
+    margin: 0px 0px;
+    padding: 0 10px;
+	text-align: center;
+	font-variant-caps: small-caps; 
     text-decoration: none;
 }
 
+@media (max-width: 800px) {
+    nav a {
+        text-align: left;
+    }
+}
 nav a:hover {
-    font-size: 1.1em;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid var(--hnf-text-color);
+    transition-duration: 0.3s;
 }
 
+/****** Le aside ASIDE *******/
 aside {
     margin: 10px 0px 10px 10px;
     padding: 10px;
@@ -32,3 +58,38 @@ aside {
     border-radius: 10px;
 }
 
+/************* Le pied de page FOOTER *******************/
+footer div {
+    margin: 5px 0 0 30px;
+    padding: 0;
+}
+footer h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+	font-variant-caps: small-caps; 
+    color: var(--hnf-text-color);
+}
+footer p {
+    margin: 0;
+    padding:0;
+    font-size: 0.8;
+    font-weight: 100;
+    color: var(--hnf-text-color);
+}
+
+footer a {
+    display: block;
+    margin: 5px;
+    padding:0;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: var(--hnf-text-color);
+    text-decoration: none;
+}
+
+/************ La section principale *************/
+section h1, aside h1 {
+    color: var(--sa-title-color)
+}
