@@ -22,7 +22,8 @@ section {
 
 
 body {
-
+	margin: 0;
+	padding: 0;
 	display: grid;
 	grid-template-columns: 1fr 25%; /* 1fr : 1 fraction de l'espace restant */
 	grid-template-rows:	80px 40px minmax(400px, auto) auto;
@@ -30,7 +31,7 @@ body {
 							"nav nav"
 							"section aside"
 							"footer footer";
-	grid-column-gap: 20px;
+	grid-column-gap: 0px;
 	/*grid-row-gap: 1px;*/
 }
 
@@ -56,9 +57,14 @@ footer {
 	column-gap: 50px;
 }
 
+
+
 /* Responsive: pour les écrans dont la largeur est inférieure à 800 px */
 @media (max-width: 800px) {
 	body {
+		margin: 0;
+		padding: 0;
+	
 		grid-template-columns: 100%;
 		grid-template-rows:	3rem auto minmax(400px, auto) auto;
 		grid-template-areas: 	"header"
