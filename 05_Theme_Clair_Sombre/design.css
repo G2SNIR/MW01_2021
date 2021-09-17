@@ -9,6 +9,20 @@
     --sa-text-color: black;
     --sa-bg-color: white;
 }
+
+[data-theme="dark"] {
+    --hf-bg-color: black;
+    --hf-text-color: white;
+
+    --n-bg-color: #444;
+    --n-text-color: white;    
+
+    --sa-title-color: white;
+    --sa-text-color: #ddd;
+    --sa-bg-color: #222;
+}
+
+
   
 
 body {
@@ -216,6 +230,14 @@ footer a {
     font-weight: 100;
     color: var(--hnf-text-color);
     text-decoration: none;
+}
+
+footer button {
+	background-color: var(--hf-bg-color);
+	color: var(--hf-text-color);
+	border: 1px solid var(--hf-text-color);
+	border-radius: 5px;
+    font-size: 20px;
 }
 
 
