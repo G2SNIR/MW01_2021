@@ -1,11 +1,14 @@
 :root{
-    --hnf-bg-color: #2874a6;
-    --hnf-text-color: white;
+    --hf-bg-color: #2874a6;
+    --hf-text-color: white;
+
+    --n-bg-color: #2874a6;
+    --n-text-color: white;    
 
     --sa-title-color: #2874a6;
     --sa-text-color: black;
+    --sa-bg-color: white;
 }
-
   
 
 body {
@@ -13,44 +16,53 @@ body {
 }
 
 
-header, nav, footer {
-    background-color: var(--hnf-bg-color);
-    color: var(--hnf-text-color);
+header, footer {
+    background-color: var(--hf-bg-color);
+    color: var(--hf-text-color);
 }
 
 header h1 {
-    margin-top: 0.7rem;
-    padding-top: 0;
-    font-size: 1.5rem;
+    margin: 10px 0;
+    padding: 0;
+    font-size: 40px;
 	font-variant-caps: small-caps; 
     text-align: center;
 }
+
 /************** La barre de navigation NAV ******************/
 nav {
     padding: 0 20px;
+    background-color: var(--n-bg-color);
+    color: var(--n-text-color);
+    /* font-size: 1rem; */
+}
+nav div {
+    text-align: center;
 }
 nav a {
-    font-size: 1em;
-    color: var(--hnf-text-color);
+    font-size: 20px;
+    color: var(--n-text-color);
     margin: 0px 0px;
     padding: 0 10px;
-	text-align: center;
 	font-variant-caps: small-caps; 
     text-decoration: none;
 }
 
-@media (max-width: 800px) {
-    nav a {
-        text-align: left;
-    }
-}
-nav a:hover {
+
+nav div:hover {
     /* text-decoration: underline; */
-    border-bottom: 2px solid var(--hnf-text-color);
+    border-bottom: 2px solid var(--n-text-color);
     transition-duration: 0.3s;
 }
 
-/** La section principale **/
+/*    La section principale */
+section, aside {
+    background-color: var(--sa-bg-color);
+    color: var(--sa-text-color);
+    padding: 10px;
+}
+
+
 section h1, aside h1 {
     color: var(--sa-title-color);
 }
@@ -77,6 +89,14 @@ section img#imgdronemavic {
     width: 30%;
 }
 
+@media screen and (orientation: portrait) {
+    section img#imgdronetello, section img#imgdronemavic {
+        float: none;
+        margin: 0;
+        width: 100%;
+    }
+
+}
 
 /* GEstion de l'affichage en 2 colonnes dans la section principale : une image à gauche et un texte à droite*/
 
@@ -123,15 +143,20 @@ section div.quatre_colonnes span.evidence {
 
 }
 
-
-
-
 /****** Le aside ASIDE *******/
 aside {
-    margin: 10px 0px 10px 10px;
-    padding: 10px;
-    border: 0.05em solid var(--hnf-bg-color);
-    border-radius: 10px;
+    /* margin: 10px 0px 10px 10px; */
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        var(--sa-bg-color),
+        var(--sa-title-color), 
+        var(--sa-bg-color)
+      ) 1 100%;
+    /* border-left: 0.05em solid linear-gradient(var(--sa-bg-color), var(--sa-title-color), var(--sa-bg-color)); */
+    /* border-radius: 10px; */
 }
 
 /************* Le pied de page FOOTER *******************/
@@ -139,10 +164,13 @@ footer div {
     margin: 5px 0 0 30px;
     padding: 0;
 }
+
+
+
 footer h1 {
     margin: 0;
     padding: 0;
-    font-size: 0.9rem;
+    font-size: 20px;
     font-weight: 400;
 	font-variant-caps: small-caps; 
     color: var(--hnf-text-color);
@@ -159,13 +187,10 @@ footer a {
     display: block;
     margin: 5px;
     padding:0;
-    font-size: 0.8rem;
+    font-size: 20px;
     font-weight: 100;
     color: var(--hnf-text-color);
     text-decoration: none;
 }
 
-/************ La section principale *************/
-section h1, aside h1 {
-    color: var(--sa-title-color)
-}
+
