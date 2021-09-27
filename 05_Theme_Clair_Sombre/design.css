@@ -1,4 +1,4 @@
-:root{
+body[data-theme="light"]{
     --hf-bg-color: #2874a6;
     --hf-text-color: white;
 
@@ -10,7 +10,7 @@
     --sa-bg-color: white;
 }
 
-[data-theme="dark"] {
+body[data-theme="dark"] {
     --hf-bg-color: black;
     --hf-text-color: white;
 
